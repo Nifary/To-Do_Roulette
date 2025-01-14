@@ -1,0 +1,136 @@
+* {
+    overflow : hidden;
+    }
+
+  body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .roulette {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 299px;
+    height: 299px;
+    border-radius: 50%;
+    border: solid black 2px;
+  }
+
+  .yes {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-left: 150px solid green;
+    border-right: 150px solid transparent;
+    border-bottom: 150px solid green;
+    border-top: 150px solid transparent;
+    display: inline-block;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transform: rotate(225deg);
+    z-index: 9;
+  }
+
+  .no {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-left: 150px solid red;
+    border-right: 150px solid red;
+    border-bottom: 150px solid red;
+    border-top: 150px solid skyblue;
+    display: inline-block;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transform: rotate(20deg);
+  }
+
+  .arrow {
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid black;
+    position: absolute;
+    top: 180px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotate(180deg);
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .fate {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+
+  .opt {
+    border: solid 2px black;
+    padding: 5px;
+  }
+
+  .no1 {
+    background-color: skyblue;
+
+  }
+
+  .no2 {
+    background-color: green;
+  }
+
+  .no3 {
+    background-color: red;
+  }
+
+  .footer {
+    position: absolute;
+    top: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pity {
+    position: absolute;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center
+  }
+
+  #pity {
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }

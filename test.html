@@ -1,0 +1,33 @@
+<html>
+    <script>
+        function getSequences(count = 5) {
+  const sequences = [];
+  for (let i = 1; i <= count; i++) {
+    let sequence = prompt(`Enter Sequence ${i}:`);
+    while (!sequence) {
+      sequence = prompt(`Sequence ${i} cannot be empty. Please enter again:`);
+    }
+    sequences.push(sequence);
+  }
+  return sequences;
+}
+
+function findMaxOccurrences(sequences, char) {
+  return Math.max(...sequences.map(seq => 
+    (seq.match(new RegExp(char, 'g')) || []).length
+  ));
+}
+
+function main() {
+  const sequences = getSequences();
+  let char = prompt("Enter a single character to search for:");
+  while (!char || char.length !== 1) {
+    char = prompt("Please enter a single character:");
+  }
+  const maxCount = findMaxOccurrences(sequences, char);
+  console.log(`Character '${char}' occurred a maximum of ${maxCount} times`);
+}
+
+main();
+    </script>
+</html>
